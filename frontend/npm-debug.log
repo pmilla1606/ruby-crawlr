@@ -1,0 +1,40 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'prune' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node_modules/react-auto-form unbuild
+5 verbose node_modules/react-fa unbuild
+6 verbose node_modules/extract-text-webpack-plugin unbuild
+7 verbose node_modules/reactify unbuild
+8 info preuninstall react-auto-form@1.1.0
+9 info preuninstall react-fa@3.0.0
+10 info preuninstall extract-text-webpack-plugin@0.3.8
+11 info preuninstall reactify@1.0.0
+12 info uninstall react-auto-form@1.1.0
+13 info uninstall react-fa@3.0.0
+14 info uninstall extract-text-webpack-plugin@0.3.8
+15 info uninstall reactify@1.0.0
+16 verbose true,/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules,/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules unbuild react-auto-form@1.1.0
+17 info postuninstall react-auto-form@1.1.0
+18 verbose true,/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules,/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules unbuild react-fa@3.0.0
+19 info postuninstall react-fa@3.0.0
+20 verbose true,/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules,/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules unbuild extract-text-webpack-plugin@0.3.8
+21 info postuninstall extract-text-webpack-plugin@0.3.8
+22 verbose true,/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules,/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules unbuild reactify@1.0.0
+23 info postuninstall reactify@1.0.0
+24 error Error: EACCES, unlink '/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules/reactify/node_modules/.bin/jsx'
+24 error  { [Error: EACCES, unlink '/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules/reactify/node_modules/.bin/jsx']
+24 error   errno: 3,
+24 error   code: 'EACCES',
+24 error   path: '/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules/reactify/node_modules/.bin/jsx' }
+25 error Please try running this command again as root/Administrator.
+26 error System Darwin 14.1.0
+27 error command "node" "/usr/local/bin/npm" "prune"
+28 error cwd /Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr
+29 error node -v v0.10.33
+30 error npm -v 1.4.28
+31 error path /Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules/reactify/node_modules/.bin/jsx
+32 error code EACCES
+33 error errno 3
+34 error stack Error: EACCES, unlink '/Users/petermargaritoff/Documents/Projects/Web_Projects/crawlr/node_modules/reactify/node_modules/.bin/jsx'
+35 verbose exit [ 3, true ]

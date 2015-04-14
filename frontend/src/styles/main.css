@@ -1,0 +1,112 @@
+/* Stiziles */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Shared */
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+.animated-transition {
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+/* End Shared */
+
+
+.nav-wrapper {
+  width: 20%;
+  position: absolute;
+  left: 0;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  padding: 10px;
+  overflow: scroll;
+}
+
+#map-canvas {
+  position: absolute;
+  width: 80%;
+  right: 0;
+  height: 100%;
+}
+
+/* -- Nav Bar Button -- */
+
+.nav-place-button {
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+}
+.nav-place-button-more-info {
+
+}
+
+/* Waypoints */
+
+.route-waypoint {
+  width:96%;
+  padding: 20px 0 20px 50px;
+  margin: auto;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+}
+.route-waypoint:hover {
+  border-right: 2px solid #ececec;
+}
+.waypoint-position {
+  height: 75px;
+  font-size: 75px;
+  line-height: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #e3e3e3;
+  z-index: -1;
+}
+.waypoint-name {
+  font-size: 1.1em;
+}
+.waypoint-options {
+  opacity: 0.5;
+  display: inline-block;
+  width: 100%;
+  font-size: 0.9em;
+}
+.waypoint-options:hover {
+  opacity: 1;
+}
+.waypoint-options a {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+.waypoint-detailed-info {
+  max-height: 0;
+  height: auto;
+  overflow: hidden;
+}
+.waypoint-detailed-info.open {
+  max-height: none;
+}
+
+
+
+
+
+
+
+
+
