@@ -144,10 +144,11 @@ var MapWrapper = React.createClass({
     });
   },
 
-  calculateDirections: function() {
+  calculateDirections: function(fromDb) {
     // if route.length === 1 => ignore
     // if route.length === 2 => directions without waypoints
     // if route.length > 2 => directions as usual
+
     var that = this;
     var waypointsArray = this.state.route;
     var waypointsArrayMiddleOnly = [];
@@ -203,10 +204,15 @@ var MapWrapper = React.createClass({
 
   },
 
-  hoverOnMarker: function(marker) {
-    console.log('index? ', marker);
-    console.log('route ', this.state.route[marker].geometry.location.toString())
+  populateMapFromDb: function(data) {
+    var waypointsFromDb = data.waypoints.split(')(');
 
+    this.replaceState({
+      route: waypointsFromDb
+    });
+  },
+
+  hoverOnMarker: function(marker) {
     var newCenter = new google.maps.LatLng(this.state.route[marker].geometry.location.lat(), this.state.route[marker].geometry.location.lng());
     console.log(newCenter)
     map.setCenter(newCenter);
@@ -248,6 +254,7 @@ var MapWrapper = React.createClass({
     return(
       <div>
         <NavWrapper
+          populateMapFromDb={this.populateMapFromDb}
           route={this.state.route}
           markers={this.state.globalMarkersArray}
           deleteAllMarkers={this.deleteMarkers}
@@ -256,7 +263,14 @@ var MapWrapper = React.createClass({
           hoverOnMarker={this.hoverOnMarker}
            />
 
-        <div id="map-canvas"></div>
+        <div id="map-canvas">
+          <div className="spinner__wrapper">
+            <div className="spinner__inner">
+              <div className="double-bounce1"></div>
+              <div className="double-bounce2"></div>
+            </div>
+          </div>
+        </div>
 
       </div>
     );

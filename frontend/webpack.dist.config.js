@@ -16,8 +16,8 @@ module.exports = {
     filename: 'main.js'
   },
 
-  debug: false,
-  devtool: false,
+  debug: true,
+  devtool: true,
   entry: './src/scripts/components/CrawlrApp.js',
 
   stats: {
@@ -27,7 +27,7 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
+    // new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
   ],
